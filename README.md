@@ -1,4 +1,4 @@
-BungeeCord with built in AntiBot protection. (English lang)
+BungeeCord with built in AntiBot protection. (Polish lang)
 ==========
 
 Videos
@@ -10,13 +10,20 @@ Falling check:
 
 Download
 --------
+
+ENG:
 You can download this protection at [Releases](https://github.com/DionaMC/BungeeCord-BotFilter-ENG/releases/)
+PL:
+Ochronę tę można pobrać ze strony: [Pobierz tutaj](https://github.com/WejsoneKK/BungeeCord-BotFilter/releases/)
+
+
 
 Credit
 --------
 [Leymooo](https://github.com/Leymooo) (Original BotFilter developer)<br>
-[koloslolya](https://github.com/SleepyKolosLolya) (Help me translate BotFilter)<br>
-[Maxsimuss](https://github.com/Maxsimuss) (Help me translate BotFilter)
+[koloslolya](https://github.com/SleepyKolosLolya) (Help translate BotFilter to English)<br>
+[Maxsimuss](https://github.com/Maxsimuss) (Help translate BotFilter to English)<br>
+[DinoMC](https://github.com/DionaMC/BungeeCord-BotFilter-ENG/releases/) (English version of Leymoo BungeeCord BotFilter)
 
 Troubleshooting
 --------
