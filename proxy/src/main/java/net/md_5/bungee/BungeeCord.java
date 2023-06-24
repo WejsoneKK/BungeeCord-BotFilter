@@ -564,7 +564,7 @@ public class BungeeCord extends ProxyServer
     @Override
     public String getName()
     {
-        return "BotFilter"; //BotFilter
+        return "FreezeCord"; //BotFilter
     }
 
     @Override

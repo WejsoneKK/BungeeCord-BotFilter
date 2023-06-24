@@ -262,7 +262,7 @@ public class ServerConnector extends PacketHandler
                 ByteBuf brand = ByteBufAllocator.DEFAULT.heapBuffer();
                 /*FreezeCord*/
 
-                DefinedPacket.writeString( "FreezeCord (v0.1.1-1.20.1-SNAPSHOT) ", brand );
+                DefinedPacket.writeString( "FreezeCord v0.1.1 (1.20.1-R0.1)", brand );
 
                 user.unsafe().sendPacket( new PluginMessage( user.getPendingConnection().getVersion() >= ProtocolConstants.MINECRAFT_1_13 ? "minecraft:brand" : "MC|Brand", DefinedPacket.toArray( brand ), handshakeHandler.isServerForge() ) );
                 brand.release();

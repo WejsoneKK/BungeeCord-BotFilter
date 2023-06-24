@@ -67,23 +67,23 @@ public class Settings extends Config
     public static class MESSAGES
     {
 
-        public String PREFIX = "&b&lBot&d&lFilter";
-        public String CHECKING = "%prefix%&7>> &aPlease wait for verification to complete...";
-        public String CHECKING_CAPTCHA = "%prefix%&7>> &aEnter the number from the image into the chat";
-        public String CHECKING_CAPTCHA_WRONG = "%prefix%&7>> &cYou entered the captcha incorrectly, please try again. You have &a%s &c%s";
-        public String SUCCESSFULLY = "%prefix%&7>> &aVerification passed";
-        public String KICK_MANY_CHECKS = "%prefix%%nl%%nl%&cWe have detected suspicious activity from your ip address%nl%%nl%&6Please try again in 10 minutes";
-        public String KICK_NOT_PLAYER = "%prefix%%nl%%nl%&cYou did not pass the verification, maybe you are a bot%nl%&7&oIf that is not so, please try again";
-        public String KICK_COUNTRY = "%prefix%%nl%%nl%&cYour country is banned from the server";
-        public String KICK_BIG_PING = "%prefix%%nl%%nl%&cYour ping is very high, most likely you are a bot";
+        public String PREFIX = "&b&lAnti&3&lBot";
+        public String CHECKING = "%prefix%&7>> &aZaczekaj na zakończenie weryfikacji...";
+        public String CHECKING_CAPTCHA = "%prefix%&7>> &aWprowadź numer z obrazka do czatu";
+        public String CHECKING_CAPTCHA_WRONG = "%prefix%&7>> &cWprowadzono nieprawidłowy captcha, spróbuj ponownie. Masz &a%s &c%s";
+        public String SUCCESSFULLY = "%prefix%&7>> &aWeryfikacja przeszła pomyślnie";
+        public String KICK_MANY_CHECKS = "%prefix%%nl%%nl%&cWykryliśmy podejrzaną aktywność z Twojego adresu ip%nl%%nl%&6Prosimy spróbować ponownie za 10 minut.";
+        public String KICK_NOT_PLAYER = "%prefix%%nl%%nl%&cYNie przeszedłeś weryfikacji, być może jesteś botem%nl%&7&oJeśli tak nie jest, spróbuj ponownie";
+        public String KICK_COUNTRY = "%prefix%%nl%%nl%&cTwój kraj został zablokowany na serwerze";
+        public String KICK_BIG_PING = "%prefix%%nl%%nl%&cTwój ping jest bardzo wysoki, najprawdopodobniej jesteś botem";
         @Comment(
             {
             "Title%nl%Subtitle", "You can leave blank to disable the title (ex: CHECKING_TITLE = \"\") ",
             "Disabling titles may slightly improve performance"
             })
-        public String CHECKING_TITLE = "&r&lBot&b&lFilter%nl%&aChecking...";
-        public String CHECKING_TITLE_SUS = "&rVerification passed%nl%&aHave a good game";
-        public String CHECKING_TITLE_CAPTCHA = " %nl%&rEnter the captcha into the chat!";
+        public String CHECKING_TITLE = "&b&lAnti&3&lBot%nl%&aSprawdzanie...";
+        public String CHECKING_TITLE_SUS = "&rWeryfikacja przeszła pomyślnie%nl%&aMiłej gry";
+        public String CHECKING_TITLE_CAPTCHA = " %nl%&rWprowadź captch na czacie!";
     }
 
     @Comment("Enable or disable GeoIp")
@@ -158,22 +158,22 @@ public class Settings extends Config
             {
                 add( "%nl%" );
                 add( "%nl%" );
-                add( "&cYou've been kicked! Please don't use direct connection" );
+                add( "&cZostałeś wyrzucony! Nie używaj bezpośredniego połączenia" );
                 add( "%nl%" );
                 add( "%nl%" );
-                add( "&bTo join the server:" );
+                add( "&bAby dołączyć do serwera: freezemc.pl" );
                 add( "%nl%" );
-                add( "&71) &rAdd the server to the &lserver list." );
+                add( "&71) &rDodanie serwera do listy &lserver." );
                 add( "%nl%" );
-                add( "&lOur IP &8>> &b&lIP" );
-                add( "%nl%" );
-                add( "%nl%" );
-                add( "&72) &rRefresh the server list. " );
-                add( "%nl%" );
-                add( "&oTo refresh it, click the &c&lRefresh&r button" );
+                add( "&lNasze IP &8>> &b&lFreezeMC.PL" );
                 add( "%nl%" );
                 add( "%nl%" );
-                add( "&73) &rWait &c1-3&r seconds and join the server!" );
+                add( "&72) &rOdśwież listę serwerów. " );
+                add( "%nl%" );
+                add( "&oAby ją odświeżyć, kliknij przycisk &c&lRefresh&r" );
+                add( "%nl%" );
+                add( "%nl%" );
+                add( "&73) &rOdczekaj &c1-3&r sekund i dołącz do serwera!" );
 
             }
         };
