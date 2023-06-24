@@ -104,7 +104,7 @@ public class Connector extends MoveHandler
             PacketUtils.titles[1].writeTitle( channel, version );
         }
         sendPing();
-        LOGGER.log( Level.INFO, toString() + " has connected" );
+        LOGGER.log( Level.INFO, toString() + " został połączony" );
 
     }
 
@@ -140,7 +140,7 @@ public class Connector extends MoveHandler
             case ONLY_CAPTCHA:
             case ONLY_POSITION:
             case CAPTCHA_POSITION:
-                String info = "(BF) [" + name + "|" + ip + "] left from server during check";
+                String info = "(BF) [" + name + "|" + ip + "] pozostawione z serwera podczas sprawdzania";
                 LOGGER.log( Level.INFO, info );
                 FailedUtils.addIpToQueue( ip, KickType.LEAVED );
                 break;
@@ -176,7 +176,7 @@ public class Connector extends MoveHandler
                     changeStateToCaptcha();
                 } else
                 {
-                    failed( KickType.FAILED_FALLING, "Too fast check passed" );
+                    failed( KickType.FAILED_FALLING, "Zbyt szybkie sprawdzanie" );
                 }
             }
             return;
@@ -184,7 +184,7 @@ public class Connector extends MoveHandler
         int devide = lastSend == 0 ? sentPings : sentPings - 1;
         if ( botFilter.checkBigPing( totalping / ( devide <= 0 ? 1 : devide ) ) )
         {
-            failed( KickType.PING, "Big ping" );
+            failed( KickType.PING, "Wysoki ping" );
             return;
         }
         state = CheckState.SUCCESSFULLY;
@@ -201,7 +201,7 @@ public class Connector extends MoveHandler
         userConnection.setNeedLogin( false );
         userConnection.getPendingConnection().finishLogin( userConnection, true );
         markDisconnected = true;
-        LOGGER.log( Level.INFO, "[BotFilter] Player (" + name + "|" + ip + ") passed verification successfully" );
+        LOGGER.log( Level.INFO, "[BotFilter] Gracz (" + name + "|" + ip + ") przeszedł pomyślnie weryfikacje" );
     }
 
     @Override
@@ -227,7 +227,7 @@ public class Connector extends MoveHandler
                 changeStateToCaptcha();
             } else
             {
-                failed( KickType.FAILED_FALLING, "Failed position check" );
+                failed( KickType.FAILED_FALLING, "Niepoprawne sprawdzanie pozycji" );
             }
             return;
         }
@@ -281,7 +281,7 @@ public class Connector extends MoveHandler
         {
             if ( message.length() > 256 )
             {
-                failed( KickType.FAILED_CAPTCHA, "Too long message" );
+                failed( KickType.FAILED_CAPTCHA, "Zbyt długa wiadomość" );
                 return;
             }
             if ( message.replace( "/", "" ).equals( captchaAnswer ) )
@@ -293,7 +293,7 @@ public class Connector extends MoveHandler
                 sendCaptcha();
             } else
             {
-                failed( KickType.FAILED_CAPTCHA, "Failed captcha check" );
+                failed( KickType.FAILED_CAPTCHA, "Weryfikacja captcha nie udana" );
             }
         }
     }
@@ -312,7 +312,7 @@ public class Connector extends MoveHandler
         {
             if ( lastSend == 0 )
             {
-                failed( KickType.PING, "Tried send fake ping" );
+                failed( KickType.PING, "Próbowano wysłać fake ping" );
                 return;
             }
             long ping = System.currentTimeMillis() - lastSend;
@@ -384,7 +384,7 @@ public class Connector extends MoveHandler
         state = CheckState.FAILED;
         PacketUtils.kickPlayer( type, Protocol.GAME, userConnection.getCh(), version );
         markDisconnected = true;
-        LOGGER.log( Level.INFO, "(BF) [" + name + "|" + ip + "] check failed: " + kickMessage );
+        LOGGER.log( Level.INFO, "(BF) [" + name + "|" + ip + "] Weryfikacja niepoprawna: " + kickMessage );
         if ( type != KickType.BIG_PACKET )
         {
             FailedUtils.addIpToQueue( ip, type );

@@ -16,8 +16,6 @@ You can download this protection at [Releases](https://github.com/DionaMC/Bungee
 PL:
 Ochronę tę można pobrać ze strony: [Pobierz tutaj](https://github.com/WejsoneKK/BungeeCord-BotFilter/releases/)
 
-
-
 Credit
 --------
 [Leymooo](https://github.com/Leymooo) (Original BotFilter developer)<br>

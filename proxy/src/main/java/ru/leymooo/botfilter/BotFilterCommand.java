@@ -35,8 +35,8 @@ public class BotFilterCommand extends Command
         if ( args.length == 0 )
         {
             sender.sendMessage( "§r--------------- §bBotFilter §cv" + Settings.IMP.BOT_FILTER_VERSION + "§r-----------------" );
-            sender.sendMessage( "§r> §lbotfilter reload §6- §aReload the configuration" );
-            sender.sendMessage( "§r> §lbotfilter stat §6- §aShow statistics" );
+            sender.sendMessage( "§r> §lbotfilter reload §6- §aPrzeladuj konfiguracje" );
+            sender.sendMessage( "§r> §lbotfilter stat §6- §aPokaz statystyki" );
             sender.sendMessage( "§r> §lbotfilter export §6- §aExport player list what passed the bot filter" );
             sender.sendMessage( "§r> §lbotfilter protection on/off §6- §aEnable or disable manual mode 'under attack'" );
             sender.sendMessage( "§r--------------- §bBotFilter §r-----------------" );
@@ -58,7 +58,7 @@ public class BotFilterCommand extends Command
             {
                 boolean enable = args[1].equalsIgnoreCase( "on" );
                 BungeeCord.getInstance().getBotFilter().setForceProtectionEnabled( enable );
-                sender.sendMessage( "§aProtection " + ( enable ? "enabled" : "§cdisabled" ) );
+                sender.sendMessage( "§aProtection " + ( enable ? "wlaczona" : "§cwylaczona" ) );
             }
         }
     }
@@ -67,11 +67,13 @@ public class BotFilterCommand extends Command
     {
         BotFilter botFilter = BungeeCord.getInstance().getBotFilter();
         sender.sendMessage( "§r----------------- §bBotFilter §cv" + Settings.IMP.BOT_FILTER_VERSION + " §r-----------------" );
-        sender.sendMessage( "§r> §lUnder attack: " + ( botFilter.isUnderAttack() ? "§cYes" : "§aNo" ) );
-        sender.sendMessage( "§r> §lBots on checking: " + botFilter.getOnlineOnFilter() );
-        sender.sendMessage( "§r> §lVerified player(s): " + botFilter.getUsersCount() );
+        sender.sendMessage( "§r> §lW trakcie ataku: " + ( botFilter.isUnderAttack() ? "§cTak" : "§aNie" ) );
+        sender.sendMessage( "§r> §lSprawdzonych botów: " + botFilter.getOnlineOnFilter() );
+        sender.sendMessage( "§r> §lZweryfikowanych gracz(y): " + botFilter.getUsersCount() );
+        sender.sendMessage( "§r " );
         sender.sendMessage( "§r> §lDownload BotFilter(RUS): http://www.rubukkit.org/threads/137038/" );
         sender.sendMessage( "§r> §lDownload BotFilter(ENG): https://github.com/DionaMC/BungeeCord-BotFilter-ENG/" );
+        sender.sendMessage( "§r> §lDownload BotFilter(PL): https://github.com/WejsoneKK/BungeeCord-BotFilter/" );
     }
 
     private void export(CommandSender sender, String[] args)

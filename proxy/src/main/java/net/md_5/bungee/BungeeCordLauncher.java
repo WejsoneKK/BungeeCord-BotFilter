@@ -45,7 +45,7 @@ public class BungeeCordLauncher
 
         BungeeCord bungee = new BungeeCord();
         ProxyServer.setInstance( bungee );
-        bungee.getLogger().log( Level.WARNING, "Enabled BungeeCord BotFilter-ENG {0} from https://github.com/DionaMC/BungeeCord-BotFilter-ENG", bungee.getGameVersion() ); //BotFilter
+        bungee.getLogger().log( Level.WARNING, "Enabled FreezeCord BotFilter-PL {0} from https://github.com/WejsoneKK/BungeeCord-BotFilter", bungee.getGameVersion() ); //BotFilter
         bungee.start();
 
         if ( !options.has( "noconsole" ) )
