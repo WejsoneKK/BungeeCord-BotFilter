@@ -33,6 +33,7 @@ import se.llbit.nbt.Tag;
 public class Dimension
 {
     static CompoundTag damageType;
+    static CompoundTag damageType1_20;
 
     static
     {
@@ -40,6 +41,8 @@ public class Dimension
         {
             damageType = (CompoundTag) CompoundTag.read(
                 new DataInputStream( new BufferedInputStream( new GZIPInputStream( Dimension.class.getResourceAsStream( "/damage-types-1.19.4.nbt" ) ) ) ) ).get( "" );
+            damageType1_20 = (CompoundTag) CompoundTag.read(
+                new DataInputStream( new BufferedInputStream( new GZIPInputStream( Dimension.class.getResourceAsStream( "/damage-types-1.20.nbt" ) ) ) ) ).get( "" );
         } catch ( IOException e )
         {
             throw new RuntimeException( e );
@@ -114,7 +117,7 @@ public class Dimension
 
         if ( protocolVersion >= ProtocolConstants.MINECRAFT_1_19_4 )
         {
-            root.add( "minecraft:damage_type", damageType );
+            root.add( "minecraft:damage_type", protocolVersion >= ProtocolConstants.MINECRAFT_1_20 ? damageType1_20 : damageType );
         }
         if ( protocolVersion >= ProtocolConstants.MINECRAFT_1_19 )
         {

@@ -138,6 +138,11 @@ public class JoinGame extends DefinedPacket
             buf.writeBoolean( false ); //lastDeathPos
         }
 
+        if ( protocolVersion >= ProtocolConstants.MINECRAFT_1_20 )
+        {
+            writeVarInt( 0, buf ); //portal cooldown
+        }
+
     }
 
     @Override
