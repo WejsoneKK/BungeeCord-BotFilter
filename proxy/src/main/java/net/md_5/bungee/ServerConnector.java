@@ -260,7 +260,10 @@ public class ServerConnector extends PacketHandler
             {
                 user.setNeedLogin( false ); //BotFilter
                 ByteBuf brand = ByteBufAllocator.DEFAULT.heapBuffer();
-                DefinedPacket.writeString( "BotFilter (https://vk.cc/8hr1pU)", brand );
+                /*FreezeCord*/
+
+                DefinedPacket.writeString( "FreezeCord (v0.1.1-1.20.1-SNAPSHOT) ", brand );
+
                 user.unsafe().sendPacket( new PluginMessage( user.getPendingConnection().getVersion() >= ProtocolConstants.MINECRAFT_1_13 ? "minecraft:brand" : "MC|Brand", DefinedPacket.toArray( brand ), handshakeHandler.isServerForge() ) );
                 brand.release();
             }

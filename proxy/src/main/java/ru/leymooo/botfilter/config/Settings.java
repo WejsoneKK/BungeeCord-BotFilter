@@ -16,11 +16,11 @@ public class Settings extends Config
         "Please submit all errors, bugs, suggestions and other requests on github "
         })
     @Final
-    public final String ISSUES = "https://github.com/Leymooo/BungeeCord/issues";
+    public final String ISSUES = "https://github.com/WejsoneKK/BungeeCord-BotFilter/issues";
     @Final
-    public final String HELP = "http://www.rubukkit.org/threads/137038/";
+    public final String HELP = "http://wiki.wejsonekk.eu/en/BungeeCord-BotFilter/help";
     @Final
-    public String BOT_FILTER_VERSION = "3.8.13";
+    public String BOT_FILTER_VERSION = "3.8.14-Custom";
 
     @Create
     public MESSAGES MESSAGES;
